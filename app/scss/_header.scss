@@ -103,4 +103,10 @@
     font-size: $font-small;
     color: $offWhite;
   }
+
+  &__logo {
+    text-align: right;
+    font-family: Inter;
+    font-weight: 400;
+  }
 }

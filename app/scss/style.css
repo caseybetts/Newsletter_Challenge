@@ -62,6 +62,7 @@
 .fade-in {
   -webkit-animation: fade-in 150ms ease-out forwards;
           animation: fade-in 150ms ease-out forwards;
+  z-index: 999;
 }
 
 .fade-in-background {
@@ -116,8 +117,9 @@ html {
 
 body {
   background-color: hsl(36deg, 100%, 99%);
-  margin: 0;
-  padding: 2;
+  margin: 20px;
+  padding: 0px;
+  z-index: 0;
   font-family: Inter, sans-serif;
   font-size: 1.25rem;
   color: hsl(240deg, 100%, 5%);
@@ -256,13 +258,19 @@ button:hover,
   font-size: 0.875rem;
   color: hsl(36deg, 100%, 99%);
 }
+.header__logo {
+  text-align: right;
+  font-family: Inter;
+  font-weight: 400;
+}
 
 .hero__image {
-  background-image: url("assetsimagesimage-web-3-mobile.jpg");
-  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 0;
   background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 17.5rem;
+  background-position: left bottom;
 }
 .hero__text {
   text-align: center;

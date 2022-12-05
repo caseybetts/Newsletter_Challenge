@@ -11,8 +11,9 @@ html {
 
 body {
   background-color: $offWhite;
-  margin: 0;
-  padding: 2;
+  margin: 20px;
+  padding: 0px;
+  z-index: 0;
   font-family: Inter, sans-serif;
   font-size: $font-med;
   color: $veryDarkBlue;
