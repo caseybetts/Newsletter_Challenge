@@ -1,0 +1,24 @@
+.hero {
+  &__image {
+    background-image: url("assets\images\image-web-3-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 17.5rem;
+  }
+
+  &__text {
+    text-align: center;
+
+    h1 {
+      color: $veryDarkBlue;
+      text-align: left;
+      font-weight: 800;
+    }
+
+    p {
+      line-height: 1.3;
+      text-align: left;
+    }
+  }
+}

@@ -21,7 +21,6 @@
     .sidebar_title { color: hsl(35, 77%, 62%); font-family: Inter, sans-serif; font-size: 42px; text-align: left;}
     .sidebar_heading { font-family: Inter, sans-serif; font-size: 24; text-align: left;}
     .numbers { color: hsl(233, 8%, 79%); font-family: Inter, sans-serif; font-size: 32;}
-    .main_title { font-family: Inter, sans-serif; font-weight: 800; color: hsl(240, 100%, 5%);}
     .hamburger { text-align: right; font-family: Inter, sans-serif; font-weight: 400;}
   </style>
 
@@ -30,33 +29,38 @@
 <body>
   
   <header class="header">
-    <nav class="flex flex-jc-sb ">
+    <div class="overlay has-fade"></div>
+
+    <nav class="flex flex-jc-sb flex-ai-c">
 
         <h1>W.</h1>
-        <a href="#" class="header__menu">
+        <a id=btnHamburger href="#" class="header__toggle hide-for-desktop">
           <span></span>
           <span></span>
           <span></span>
-
         </a>
 
-        <div class="header__links">
+        <div class="header__links hide-for-mobile">
           <a href="#">Home</a>
           <a href="#">New</a>
           <a href="#">Popular</a>
           <a href="#">Trending</a>
           <a href="#">Categories</a>
         </div>
-    </nav>
-  </header>
 
-  <aside> This text is aside here</aside>
-  <!--
-            
-        
-        
-        
-        
+        <button type="button" class="button header__cta hide-for-mobile">Read More</button>
+    </nav>
+
+    <div class="header__menu has-fade">
+      <a href="#">Home</a>
+      <a href="#">New</a>
+      <a href="#">Popular</a>
+      <a href="#">Trending</a>
+      <a href="#">Categories</a>
+    </div>
+
+  </header>
+      
   <br>
   <img src="assets\images\image-web-3-desktop.jpg" alt="Blocks" width="600" height="300">
   <br>
@@ -65,7 +69,9 @@
   <br>
 
 
-  <h1 class="main_title">The Bright Future of Web 3.0?</h1>
+  <h1 class="hero__text">The Bright Future of Web 3.0?</h1>
+
+  <p class="hero__text">Testing this out</p>
 
   <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
   But is it really fulfilling its promise?</p>
@@ -103,7 +109,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Casey Betts</a>.
   </div>
--->
+
   <script src="app/js/script.js"></script>
 </body>
 </html>

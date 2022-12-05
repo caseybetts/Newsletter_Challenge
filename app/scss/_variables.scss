@@ -1,6 +1,6 @@
 // Colors
 
-// Primary 
+// Primary
 $softOrange: hsl(35, 77%, 62%);
 $softRed: hsl(5, 85%, 63%);
 
@@ -11,5 +11,8 @@ $darkGraishBlue: hsl(236, 13%, 42%);
 $veryDarkBlue: hsl(240, 100%, 5%);
 
 // Font sizes
-$font-med: 1.25rem;
-$font-small: .875rem;
+$font-med: 1.25rem; //18px
+$font-small: 0.875rem; //14px
+
+// Header Geometry
+$bottomOfHeader: 8.5rem; //136px
