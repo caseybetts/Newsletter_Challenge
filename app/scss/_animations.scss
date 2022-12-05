@@ -17,8 +17,27 @@
   }
 }
 
+@keyframes fade-in-background {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 30%;
+  }
+}
+
 .fade-in {
   animation: fade-in 150ms ease-out forwards;
+}
+
+.fade-in-background {
+  animation: fade-in-background 150ms ease-out forwards;
 }
 
 @keyframes fade-out {
@@ -37,5 +56,5 @@
 }
 
 .fade-out {
-  animation: fade-out 150ms ease-in forwards;
+  animation: fade-out 100ms ease-in forwards;
 }

@@ -5,9 +5,11 @@
 
   &.open {
     .overlay {
-      animation: fade-in 300ms ease-out forwards;
+      animation: fade-in-background 300ms ease-out forwards;
     }
     .header__toggle {
+      position: relative;
+      z-index: 1000;
       > span:first-child {
         transform-origin: 5px 2px;
         transform: rotate(45deg);
@@ -27,33 +29,38 @@
   &__menu {
     position: absolute;
     width: calc(100% - 3rem);
+    height: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    top: 0px;
+    transform: translateX(-30%);
     background: $offWhite;
     margin: 0px 1.5rem;
-    padding: 1.625rem;
-    border-radius: 3px;
+    padding: 0.825rem;
 
     a {
+      position: relative;
       display: block;
       color: $veryDarkBlue;
       padding: 0.625rem;
-      text-align: center;
+      text-align: left;
+      top: 150px;
+    }
+
+    &::first-line {
+      color: $softOrange;
     }
   }
 
   .overlay {
-    opacity: 0;
     position: fixed;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: linear-gradient($veryDarkBlue, transparent);
+    background: $veryDarkBlue;
   }
 
   nav {
-    position: relative;
     background-color: $offWhite;
     padding-top: 1.0625rem;
     padding-bottom: 1.0625rem;
