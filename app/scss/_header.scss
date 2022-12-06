@@ -64,6 +64,8 @@
     background-color: $offWhite;
     padding-top: 1.0625rem;
     padding-bottom: 1.0625rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   &__toggle {
@@ -85,23 +87,18 @@
 
   &__links {
     a {
-      font-size: $font-small;
+      font-size: $font-med;
       color: $darkGraishBlue;
       transition: color 150ms ease-in-out;
 
       &:not(:last-child) {
-        margin-right: 32px;
+        margin-right: 50px;
       }
 
       &:hover {
         color: $softOrange;
       }
     }
-  }
-
-  &__cta {
-    font-size: $font-small;
-    color: $offWhite;
   }
 
   &__logo {

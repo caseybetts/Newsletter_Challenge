@@ -1,0 +1,46 @@
+.sidebar {
+  @include breakpoint-up(large) {
+    grid-area: sidebar;
+  }
+  position: relative;
+  background-color: $veryDarkBlue;
+  left: 0;
+  padding: 30px;
+  height: 100%;
+  margin-left: 20px;
+
+  h2 {
+    color: $softOrange;
+    font-family: Inter, sans-serif;
+    font-size: 42px;
+    text-align: left;
+    margin-top: 0px;
+  }
+
+  a {
+    color: $offWhite;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: left;
+
+    &:hover {
+      color: $softOrange;
+    }
+  }
+
+  p {
+    color: $grayishBlue;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 300;
+    padding-bottom: 20px;
+    border-style: groove;
+    border-width: 1px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-color: $offWhite;
+  }
+}

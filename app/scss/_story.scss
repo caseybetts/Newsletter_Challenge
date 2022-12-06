@@ -1,0 +1,55 @@
+.story {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-column: 2/3;
+
+  padding: 20px;
+
+  &__1 {
+    grid-area: story1;
+  }
+
+  &__2 {
+    grid-area: story2;
+  }
+
+  &__3 {
+    grid-area: story3;
+  }
+
+  h2 {
+    color: $grayishBlue;
+    font-family: Inter, sans-serif;
+    font-size: 32;
+    vertical-align: top;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+
+  &__image {
+    grid-column: 1/2;
+
+    width: 120px;
+    height: 160px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  &__text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__links {
+    color: $veryDarkBlue;
+    font-size: 20px;
+    font-weight: 700;
+
+    &:hover {
+      color: $softRed;
+    }
+  }
+}

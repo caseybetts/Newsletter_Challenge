@@ -140,6 +140,14 @@ a:hover {
   padding-right: 1.5rem;
 }
 
+@media (min-width: 64em) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "hero_image hero_image sidebar" "hero_title hero_desc sidebar" "story1 story2 story3";
+  }
+}
+
 .flex {
   display: flex;
 }
@@ -151,20 +159,6 @@ a:hover {
 }
 .flex-ai-c {
   align-items: center;
-}
-
-button,
-.button {
-  padding: 1rem 1.875rem;
-  color: hsl(36deg, 100%, 99%);
-  background: hsl(5deg, 85%, 63%);
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-}
-button:hover,
-.button:hover {
-  background: hsl(240deg, 100%, 5%);
 }
 
 @media (max-width: 63.9375em) {
@@ -232,6 +226,8 @@ button:hover,
   background-color: hsl(36deg, 100%, 99%);
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .header__toggle > span {
   display: block;
@@ -244,19 +240,15 @@ button:hover,
   margin-bottom: 3px;
 }
 .header__links a {
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   color: hsl(236deg, 13%, 42%);
   transition: color 150ms ease-in-out;
 }
 .header__links a:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 50px;
 }
 .header__links a:hover {
   color: hsl(35deg, 77%, 62%);
-}
-.header__cta {
-  font-size: 0.875rem;
-  color: hsl(36deg, 100%, 99%);
 }
 .header__logo {
   text-align: right;
@@ -267,20 +259,142 @@ button:hover,
 .hero__image {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 400px;
   z-index: 0;
   background-repeat: no-repeat;
   background-position: left bottom;
+  padding-right: 20px;
 }
-.hero__text {
-  text-align: center;
+@media (min-width: 64em) {
+  .hero__image {
+    grid-area: hero_image;
+  }
 }
-.hero__text h1 {
-  color: hsl(240deg, 100%, 5%);
+.hero__title {
   text-align: left;
   font-weight: 800;
+  font-size: 69px;
+  line-height: 1;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-bottom: 20px;
 }
-.hero__text p {
+@media (min-width: 64em) {
+  .hero__title {
+    grid-area: hero_title;
+  }
+}
+.hero__description {
   line-height: 1.5;
+  font-size: 1.15rem;
   text-align: left;
+}
+@media (min-width: 64em) {
+  .hero__description {
+    grid-area: hero_desc;
+  }
+}
+.hero__button {
+  padding: 1rem 1.875rem;
+  color: hsl(36deg, 100%, 99%);
+  background: hsl(5deg, 85%, 63%);
+  border: 0;
+  cursor: pointer;
+}
+.hero__button:hover {
+  background: hsl(240deg, 100%, 5%);
+}
+.hero__cta {
+  font-size: 0.875rem;
+  color: hsl(36deg, 100%, 99%);
+}
+
+.sidebar {
+  position: relative;
+  background-color: hsl(240deg, 100%, 5%);
+  left: 0;
+  padding: 30px;
+  height: 100%;
+  margin-left: 20px;
+}
+@media (min-width: 64em) {
+  .sidebar {
+    grid-area: sidebar;
+  }
+}
+.sidebar h2 {
+  color: hsl(35deg, 77%, 62%);
+  font-family: Inter, sans-serif;
+  font-size: 42px;
+  text-align: left;
+  margin-top: 0px;
+}
+.sidebar a {
+  color: hsl(36deg, 100%, 99%);
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+}
+.sidebar a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.sidebar p {
+  color: hsl(233deg, 8%, 79%);
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  text-align: left;
+  font-weight: 300;
+  padding-bottom: 20px;
+  border-style: groove;
+  border-width: 1px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: hsl(36deg, 100%, 99%);
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-column: 2/3;
+  padding: 20px;
+}
+.story__1 {
+  grid-area: story1;
+}
+.story__2 {
+  grid-area: story2;
+}
+.story__3 {
+  grid-area: story3;
+}
+.story h2 {
+  color: hsl(233deg, 8%, 79%);
+  font-family: Inter, sans-serif;
+  font-size: 32;
+  vertical-align: top;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+.story__image {
+  grid-column: 1/2;
+  width: 120px;
+  height: 160px;
+}
+.story p {
+  font-size: 15px;
+}
+.story__text {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.story__links {
+  color: hsl(240deg, 100%, 5%);
+  font-size: 20px;
+  font-weight: 700;
+}
+.story__links:hover {
+  color: hsl(5deg, 85%, 63%);
 }/*# sourceMappingURL=style.css.map */
