@@ -3,8 +3,16 @@
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
   grid-column: 2/3;
-
   padding: 20px;
+
+  @include breakpoint-down(medium) {
+    padding-left: 0px;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  &:last-child {
+    padding-right: 0px;
+  }
 
   &__1 {
     grid-area: story1;
@@ -30,12 +38,8 @@
   &__image {
     grid-column: 1/2;
 
-    width: 120px;
-    height: 160px;
-  }
-
-  p {
-    font-size: 15px;
+    width: 100%;
+    height: 100%;
   }
 
   &__text {
@@ -45,11 +49,24 @@
 
   &__links {
     color: $veryDarkBlue;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 23px;
+    font-weight: 800;
 
     &:hover {
       color: $softRed;
+    }
+
+    @include breakpoint-down(medium) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1;
+
+    @include breakpoint-down(medium) {
+      font-size: 15px;
     }
   }
 }

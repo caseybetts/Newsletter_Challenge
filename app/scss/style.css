@@ -140,6 +140,9 @@ a:hover {
   padding-right: 1.5rem;
 }
 
+.grid {
+  grid-gap: 1em;
+}
 @media (min-width: 64em) {
   .grid {
     display: grid;
@@ -241,7 +244,7 @@ a:hover {
 }
 .header__links a {
   font-size: 1.25rem;
-  color: hsl(236deg, 13%, 42%);
+  color: hsl(233deg, 14%, 64%);
   transition: color 150ms ease-in-out;
 }
 .header__links a:not(:last-child) {
@@ -259,21 +262,21 @@ a:hover {
 .hero__image {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 340px;
   z-index: 0;
   background-repeat: no-repeat;
   background-position: left bottom;
-  padding-right: 20px;
 }
 @media (min-width: 64em) {
   .hero__image {
     grid-area: hero_image;
+    padding-right: 20px;
   }
 }
 .hero__title {
   text-align: left;
   font-weight: 800;
-  font-size: 69px;
+  font-size: 42px;
   line-height: 1;
   margin-top: 20px;
   margin-left: 0px;
@@ -282,23 +285,32 @@ a:hover {
 @media (min-width: 64em) {
   .hero__title {
     grid-area: hero_title;
+    font-size: 69px;
+    padding-right: 20px;
   }
 }
 .hero__description {
   line-height: 1.5;
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   text-align: left;
 }
 @media (min-width: 64em) {
   .hero__description {
     grid-area: hero_desc;
+    font-size: 1.3rem;
   }
 }
 .hero__button {
   padding: 1rem 1.875rem;
   color: hsl(36deg, 100%, 99%);
+  font-weight: 400;
+  font-family: Inter, sans-serif;
+  letter-spacing: 0.4rem;
   background: hsl(5deg, 85%, 63%);
   border: 0;
+  margin-top: 10px;
+  margin-bottom: 65px;
+  min-width: 200px;
   cursor: pointer;
 }
 .hero__button:hover {
@@ -315,7 +327,6 @@ a:hover {
   left: 0;
   padding: 30px;
   height: 100%;
-  margin-left: 20px;
 }
 @media (min-width: 64em) {
   .sidebar {
@@ -335,23 +346,26 @@ a:hover {
   font-weight: 700;
   font-size: 24px;
   text-align: left;
+  padding-top: 40px;
 }
 .sidebar a:hover {
   color: hsl(35deg, 77%, 62%);
 }
 .sidebar p {
-  color: hsl(233deg, 8%, 79%);
+  color: hsl(233deg, 14%, 64%);
   font-family: Inter, sans-serif;
-  font-size: 18px;
+  font-size: 21px;
   text-align: left;
-  font-weight: 300;
-  padding-bottom: 20px;
+  font-weight: 400;
+}
+.sidebar p:not(:last-child) {
+  padding-bottom: 40px;
   border-style: groove;
   border-width: 1px;
   border-top: none;
   border-right: none;
   border-left: none;
-  border-color: hsl(36deg, 100%, 99%);
+  border-color: hsl(233deg, 14%, 64%);
 }
 
 .story {
@@ -360,6 +374,15 @@ a:hover {
   grid-template-rows: 1fr;
   grid-column: 2/3;
   padding: 20px;
+}
+@media (max-width: 63.9375em) {
+  .story {
+    padding-left: 0px;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+.story:last-child {
+  padding-right: 0px;
 }
 .story__1 {
   grid-area: story1;
@@ -380,11 +403,8 @@ a:hover {
 }
 .story__image {
   grid-column: 1/2;
-  width: 120px;
-  height: 160px;
-}
-.story p {
-  font-size: 15px;
+  width: 100%;
+  height: 100%;
 }
 .story__text {
   padding-left: 20px;
@@ -392,9 +412,23 @@ a:hover {
 }
 .story__links {
   color: hsl(240deg, 100%, 5%);
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 23px;
+  font-weight: 800;
 }
 .story__links:hover {
   color: hsl(5deg, 85%, 63%);
+}
+@media (max-width: 63.9375em) {
+  .story__links {
+    font-size: 20px;
+  }
+}
+.story p {
+  font-size: 20px;
+  line-height: 1;
+}
+@media (max-width: 63.9375em) {
+  .story p {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
